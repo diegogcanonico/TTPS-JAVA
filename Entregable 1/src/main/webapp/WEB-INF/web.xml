@@ -1,0 +1,75 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <context-param>
+ 	<param-name>actividades1</param-name>
+ 	<param-value>GAP</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>actividades2</param-name>
+ 	<param-value>BodyPump</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>actividades3</param-name>
+ 	<param-value>Streatching</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>actividades4</param-name>
+ 	<param-value>Musculación</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>actividades5</param-name>
+ 	<param-value>CrossFit</param-value>
+ </context-param>
+
+
+	<servlet>
+  	<servlet-name>ServletChequearReserva</servlet-name>
+  	<display-name>ServletChequearReserva</display-name>
+  	<description></description>
+  	<servlet-class>ServletChequearReserva</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<display-name>ServletLogin</display-name>
+  	<description></description>
+  	<servlet-class>ServletLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletImprimeReserva</servlet-name>
+  	<display-name>ServletImprimeReserva</display-name>
+  	<description></description>
+  	<servlet-class>ServletImprimeReserva</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletInicializarCupos</servlet-name>
+  	<display-name>ServletInicializarCupos</display-name>
+  	<description></description>
+  	<servlet-class>ServletInicializarCupos</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletChequearReserva</servlet-name>
+  	<url-pattern>/ServletChequearReserva</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletLogin</servlet-name>
+  	<url-pattern>/ServletLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletImprimeReserva</servlet-name>
+  	<url-pattern>/ServletImprimeReserva</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletInicializarCupos</servlet-name>
+  	<url-pattern>/ServletInicializarCupos</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-image: url("imagenes/muro1.png");
+    background-position: inherit;
+    background-repeat: no-repeat;
+}
+
+.bg-navbar {
+    background: linear-gradient(to left, #030045, #250B65, #6E4AAC);
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+
+.btn{
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-display: c;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #FFF;
+    background-size: 300%;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.btn1{
+    background-image: linear-gradient(to left, #00C9A7, #00C9A7, #00C9A7);
+}
+
+
+.btn2{
+    background-image: linear-gradient(to right, #00C9A7, #00C9A7, #00C9A7);
+}
+
+.btn1:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+.btn2:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+.redondo1{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image:url(imagenes/facebook.png);
+    background-position:center;
+    border: 1px solid #00C9A7;
+    border-width: 2px;
+  }
+  .redondo2{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image:url(imagenes/instagram.png);
+    background-position:center;
+    border: 1px solid #00C9A7;
+    border-width: 2px;
+  }
+  .redondo3{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image:url(imagenes/twitter.png);
+    background-position:center;
+    border: 1px solid #00C9A7;
+    border-width: 2px;
+  }
+  .redondo4{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image:url(imagenes/whatsapp.png);
+    background-position:center;
+    border: 1px solid #00C9A7;
+    border-width: 2px;
+  }
+
+b{
+    margin-left: 20px;
+
+}
+
+input.filtroTabla{
+    margin-left: 20px;
+}
+
+input.filtroTabla2{
+    margin-left: 65px;
+}
+
+p{
+    text-align: right;
+    font-size: medium;
+}
+
+img.pizarra{
+    height: 700px;
+    float: inherit;
+}
+
+a.texto{
+   margin-left: 800px;
+}
+
+select.selector{
+    margin-left: 750px;
+    background-color: grey;
+}
+
+
+.emprendedores{
+    margin-top: 100px;
+}
+
+.emprendedores2{
+    margin-top: 100px;
+}
+
+#derecha {
+    margin-left:700px;
+    width: 600px;
+    margin-top: -300px;
+}
+
+label.form-label{
+    color: #030045;
+}
+
+label.form-check-label{
+    color: #030045;
+}
+
+section2{
+    margin-top: -50px;
+    margin-left: 300px;
+}
+
+#derecha2 {
+    margin-left:700px;
+    width: 600px;
+    margin-top: -500px;
+}
+
+#container2{
+    margin-top: -50px;
+    margin-left: 300px;
+}
+
+.formulario{
+    margin-left:700px;
+    width: 600px;
+    margin-top: -300px;
+}
+
+
+#contenedor {
+    float: right;
+    width: 804px;
+    margin-right: 200px;
+    }
+    
+    #tabla1 {
+    float: left;
+    width: 400px;
+    border-color: #030045;
+    margin-top: -300px;
+    }
+    
+    #tabla1 table {
+    text-align: center;
+    border-color: #030045;
+    }
+    
+    #tabla1 table tr td {
+    width: 100px;
+    border-color: #030045;
+    border: 1px solid #000;
+    }
+    
+    #tabla2 {
+    float: right;
+    width: 400px;
+    border-color: #030045;
+    margin-top: -300px;
+    }
+    
+    #tabla2 table {
+    text-align: center;
+    border-color: #030045;
+    }
+    
+    #tabla2 table tr td {
+    width: 100px;
+    border-color: #030045;
+    border: 1px solid #000;
+    
+    }
+
+    td, tr {
+        width: 25%;
+        text-align: center;
+        vertical-align: top;
+        border: 1px solid #000;
+        border-collapse: collapse;
+        caption-side: bottom;
+     }
+
+   
+    
