@@ -9,13 +9,15 @@ public class Donacion {
     private String nombreDonador;
     private String mensaje;
     private Plan plan;
+    private Double precioHistoricoPorManguito;
 
-    public Donacion(Integer cantidadManguitos, LocalDate fecha, String nombreDonador, String mensaje, Plan plan) {
+    public Donacion(Integer cantidadManguitos, LocalDate fecha, String nombreDonador, String mensaje, Plan plan, Double precioHistoricoPorManguito) {
         this.cantidadManguitos = cantidadManguitos;
         this.fecha = fecha;
         this.nombreDonador = nombreDonador;
         this.mensaje = mensaje;
         this.plan = plan;
+        this.precioHistoricoPorManguito = precioHistoricoPorManguito;
     }
 
     public Integer getCantidadManguitos() {
@@ -58,6 +60,14 @@ public class Donacion {
         this.plan = plan;
     }
 
+    public Double getPrecioHistoricoPorManguito() {
+        return precioHistoricoPorManguito;
+    }
+
+    public void setPrecioHistoricoPorManguito(Double precioHistoricoPorManguito) {
+        this.precioHistoricoPorManguito = precioHistoricoPorManguito;
+    }
+
     @Override
     public String toString() {
         return "Donacion{" +
@@ -66,6 +76,7 @@ public class Donacion {
                 ", nombreDonador='" + nombreDonador + '\'' +
                 ", mensaje='" + mensaje + '\'' +
                 ", plan=" + plan +
+                ", precioHistoricoPorManguito=" + precioHistoricoPorManguito +
                 '}';
     }
 

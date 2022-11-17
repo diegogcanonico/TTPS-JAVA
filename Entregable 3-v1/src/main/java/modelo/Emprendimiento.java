@@ -12,12 +12,12 @@ public class Emprendimiento {
     private Boolean vistaDonadores;
     private Boolean vistaManguitosRecibidos;
     private List<RedSocial> redSocial;
-    private Double precioPorManguito;
+    private Double precioActualPorManguito;
     private List<Plan> planes;
     private List<Donacion> donaciones;
     private List<Posteo> posteos;
 
-    public Emprendimiento(String nombre, String dominio, String descripcion, String banner, Categoria categoria, Boolean vistaDonadores, Boolean vistaManguitosRecibidos, List<RedSocial> redSocial, Double precioPorManguito, List<Plan> planes, List<Donacion> donaciones, List<Posteo> posteos) {
+    public Emprendimiento(String nombre, String dominio, String descripcion, String banner, Categoria categoria, Boolean vistaDonadores, Boolean vistaManguitosRecibidos, List<RedSocial> redSocial, Double precioActualPorManguito, List<Plan> planes, List<Donacion> donaciones, List<Posteo> posteos) {
         this.nombre = nombre;
         this.dominio = dominio;
         this.descripcion = descripcion;
@@ -26,7 +26,7 @@ public class Emprendimiento {
         this.vistaDonadores = vistaDonadores;
         this.vistaManguitosRecibidos = vistaManguitosRecibidos;
         this.redSocial = redSocial;
-        this.precioPorManguito = precioPorManguito;
+        this.precioActualPorManguito = precioActualPorManguito;
         this.planes = planes;
         this.donaciones = donaciones;
         this.posteos = posteos;
@@ -96,12 +96,12 @@ public class Emprendimiento {
         this.redSocial = redSocial;
     }
 
-    public Double getPrecioPorManguito() {
-        return precioPorManguito;
+    public Double getPrecioActualPorManguito() {
+        return precioActualPorManguito;
     }
 
-    public void setPrecioPorManguito(Double precioPorManguito) {
-        this.precioPorManguito = precioPorManguito;
+    public void setPrecioActualPorManguito(Double precioActualPorManguito) {
+        this.precioActualPorManguito = precioActualPorManguito;
     }
 
     public List<Plan> getPlanes() {
@@ -139,7 +139,7 @@ public class Emprendimiento {
                 ", vistaDonadores=" + vistaDonadores +
                 ", vistaManguitosRecibidos=" + vistaManguitosRecibidos +
                 ", redSocial=" + redSocial +
-                ", precioPorManguito=" + precioPorManguito +
+                ", precioActualPorManguito=" + precioActualPorManguito +
                 ", planes=" + planes +
                 ", donaciones=" + donaciones +
                 ", posteos=" + posteos +
