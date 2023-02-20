@@ -25,6 +25,12 @@ public class EmprendimientoController {
     }
 
     @GetMapping
+    public ResponseEntity <List<Emprendimiento>> obtenerEmprendimientos(){
+        List<Emprendimiento> emprendimientos = emprendimientoService.listar();
+        return new ResponseEntity<List<Emprendimiento>>(emprendimientos, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
     public ResponseEntity <Optional<Emprendimiento>> obtenerEmprendimiento(@PathVariable("id") long id){
         Optional<Emprendimiento> emprendimiento = emprendimientoService.encontrar(id);
         return new ResponseEntity<Optional<Emprendimiento>>(emprendimiento, HttpStatus.OK);
