@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/emprendimientos")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class EmprendimientoController {
 
     @Autowired
@@ -30,7 +31,7 @@ public class EmprendimientoController {
         return new ResponseEntity<List<Emprendimiento>>(emprendimientos, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/emprendimiento/{id}")
     public ResponseEntity <Optional<Emprendimiento>> obtenerEmprendimiento(@PathVariable("id") long id){
         Optional<Emprendimiento> emprendimiento = emprendimientoService.encontrar(id);
         return new ResponseEntity<Optional<Emprendimiento>>(emprendimiento, HttpStatus.OK);
