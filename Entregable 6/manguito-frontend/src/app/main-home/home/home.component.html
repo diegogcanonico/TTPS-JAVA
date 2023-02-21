@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financiamiento Colectivo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src=
@@ -26,31 +26,22 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
+                    <a class="nav-link" href="/assets/sobreNosotros.html">Sobre nosotros</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="registro.html">Registrar</a></li>
-                      <li><a class="dropdown-item" href="autenticar.html">Autenticar</a></li>
-                      <li><a class="dropdown-item" href="donacion.html">Donar</a></li>
-                    </ul>
-                  </li>
+                  <app-menu></app-menu>
                 </ul>
                 <form class="d-flex" role="admin">
-                  <button type="submit" formaction="autenticarAdmin.html" class="btn btn1">Ingreso Admin</button>
+                  <button type="submit" formaction="/assets/autenticarAdmin.html" class="btn btn1">Ingreso Admin</button>
                 </form>
                 <form class="d-flex" role="registro">
-                  <button type="submit" formaction="registro.html" class="btn btn1">Registrar</button>
+                  <button type="submit" routerLink="/emprendedoresYemprendimientos" class="btn btn1">Registrar</button>
                 </form>
                 <form class="d-flex" role="Autenticar">
-                  <button type="submit" formaction="autenticar.html" class="btn btn2">Autenticar</button>
+                  <button type="submit" formaction="/assets/autenticar.html" class="btn btn2">Autenticar</button>
                 </form>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit" formaction="search.html">Buscar</button>
+                  <button class="btn btn-outline-success" type="submit" formaction="/assets/search.html">Buscar</button>
                 </form>
               </div>
             </div>
@@ -63,103 +54,16 @@
             <input class="filtroTabla" id="gfg" type="text" 
                    placeholder="buscar" style="color: black">
           </b>
-          <br></br>
+          
           <a class="texto" style="color: black">Emprendimientos más relevantes</a>
-          <br></br>
+          
           <select class="selector">
             <option value="" onclick="sortTable(1, 'int')">Emprendimientos con mayores donaciones</option>
             <option value="" onclick="sortTable(4, 'int')">Emprendimientos con más visitas</option>
           </select>
-            <table id="example" class="table table-dark mt-5 container">
-                <thead>
-                  <tr>
-                    <th scope="col">Emprendimiento</th>
-                    <th scope="col">Donaciones</th>
-                    <th scope="col">Categoría</th>
-                    <th scope="col">Donar</th>
-                    <th scope="col">Visitas</th>
-                  </tr>
-                </thead>
-                <tbody id="cuerpo">
-                      <tr>
-                    <td>AyudAR</td>
-                    <td>10</td>
-                    <td>Alimentos</td>
-                    <td><a href="donacion.html?valor=AyudAR"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>1000</td>
-                  </tr>
-                  <tr>
-                    <td>Manos abiertas</td>
-                    <td>10</td>
-                    <td>Alimentos</td>
-                    <td><a href="donacion.html?valor=Manos abiertas"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>10000</td>
-                  </tr>
-                  <tr>
-                    <td>Fundación Pietro</td>
-                    <td>2</td>
-                    <td>Alimentos</td>
-                    <td><a href="donacion.html?valor=Fundación Pietro"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>2500</td>
-                  </tr>
-                  <tr>
-                    <td>La chata solidaria</td>
-                    <td>16</td>
-                    <td>Alimentos</td>
-                    <td><a href="donacion.html?valor=La chata solidaria"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>560</td>
-                  </tr>
-                  <tr>
-                    <td>Sueños cumplidos</td>
-                    <td>23</td>
-                    <td>Educación</td>
-                    <td><a href="donacion.html?valor=Sueños cumplidos"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>3470</td>
-                  </tr>
-                  <tr>
-                    <td>CHAP</td>
-                    <td>66</td>
-                    <td>Educación</td>
-                    <td><a href="donacion.html?valor=CHAP"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>57</td>
-                  </tr>
-                  <tr>
-                    <td>Comprometerse más</td>
-                    <td>1</td>
-                    <td>Educación</td>
-                    <td><a href="donacion.html?=valor=Comprometerse más"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>Agua de esperanza</td>
-                    <td>190</td>
-                    <td>Textil</td>
-                    <td><a href="donacion.html?valor=Agua de esperanza"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>19</td>
-                  </tr>
-                  <tr>
-                    <td>Effata</td>
-                    <td>29</td>
-                    <td>Tecnología</td>
-                    <td><a href="donacion.html?valor=Effata"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>1900</td>
-                  </tr>
-                  <tr>
-                    <td>Fundación corazonada</td>
-                    <td>100</td>
-                    <td>Tecnología</td>
-                    <td><a href="donacion.html?valor=Fundación corazonada"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>5600</td>
-                  </tr>
-                  <tr>
-                    <td>Grupo puentes</td>
-                    <td>198</td>
-                    <td>Tecnología</td>
-                    <td><a href="donacion.html?valor=Grupo puentes"><img href="donacion.html" src="iconos/piggy-bank.png"/></a></td>
-                    <td>2300</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="container">
+            <app-lista-emprendimientos></app-lista-emprendimientos>
+          </div>
               <script>
                 $(document).ready(function() {
                     $("#gfg").on("keyup", function() {

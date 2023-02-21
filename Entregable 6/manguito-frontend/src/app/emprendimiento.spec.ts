@@ -1,4 +1,4 @@
-import { Emprendimiento } from './emprendimiento';
+import { Emprendimiento } from './Model/emprendimiento';
 
 describe('Emprendimiento', () => {
   it('should create an instance', () => {
