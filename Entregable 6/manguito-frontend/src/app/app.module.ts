@@ -10,6 +10,7 @@ import { MenuComponent } from './main-home/menu/menu.component';
 import { AltaEmprendedoresComponent } from './emprendedor-emprendimiento/alta-emprendedores/alta-emprendedores.component';
 import { EmprendedoresEmprendimientosComponent } from './emprendedor-emprendimiento/emprendedores-emprendimientos/emprendedores-emprendimientos.component';
 import { FormsModule } from '@angular/forms';
+import { AltaEmprendimientosComponent } from './emprendedor-emprendimiento/alta-emprendimientos/alta-emprendimientos.component';
 
 
 
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     AltaEmprendedoresComponent,
     EmprendedoresEmprendimientosComponent,
+    AltaEmprendimientosComponent,
    
 
   ],

@@ -23,7 +23,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
@@ -33,17 +33,15 @@
                       Menu
                     </a>
                     <li class="nav-item">
-                      <a class="nav-link" href="sobreNosotros.html">> Registrar</a>
+                      <a class="nav-link" href="sobreNosotros.html">> Registrar > Emprendimiento</a>
                     </li>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="autenticar.html">Autenticar</a></li>
                       <li><a class="dropdown-item" href="donacion.html">Donar</a></li>
                     </ul>
                  
                 </ul>
-                <form class="d-flex" role="Autenticar">
-                  <button type="submit" formaction="autenticar.html" class="btn btn2">Autenticar</button>
-                </form>
+                <a>Emprendedor: juan124</a>
+                <img src="iconos/user.png" height="50px">
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit" formaction="search.html">Buscar</button>
@@ -53,15 +51,33 @@
           </nav>
     </header>
  
-      <p><a class="btn btn-primary btn-lg" routerLink=".." role="button">Volver</a></p>
-  
+      <p><a class="btn btn-primary btn-lg" href="registroExitoso.html" role="button">Volver</a></p>
+   
     <main>
         <section>
-          <div>
-            <a routerLink="/altaEmprendedorest"><img class="emprendedores" src="/assets/imagenes/emprendedor.png" height="400px"></a>
-            <a  [routerLink]="['/altaEmprendimientos']"><img class="emprendedores" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
-          </div>
+            <a ><img class="emprendedores2" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
         </section>
+        <div id="derecha">
+                <form class="row g-2 needs-validation" novalidate action="registroExitoso2.html">
+                    <div class="col-md-6">
+                      <label for="validationCustom01"  class="form-label" >Dominio del emprendimiento</label>
+                      <input type="text" class="form-control" id="validationCustom01" value="" required>
+                      <div class="valid-feedback">
+                        Dato correcto
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationCustom02" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="validationCustom02" value="" required>
+                      <div class="valid-feedback">
+                        Dato correcto
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary" type="submit">Siguiente</button>
+                    </div>
+                  </form>
+        </div>
     </main>
     <footer class="d-flex justify-content-evenly bg-navbar align-items-center">
         <h2>Contactanos</h2>

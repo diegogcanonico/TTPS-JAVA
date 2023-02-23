@@ -5,22 +5,18 @@ import { HomeComponent } from './main-home/home/home.component';
 import { MenuComponent } from './main-home/menu/menu.component';
 import { EmprendedoresEmprendimientosComponent } from './emprendedor-emprendimiento/emprendedores-emprendimientos/emprendedores-emprendimientos.component';
 import { AltaEmprendedoresComponent } from './emprendedor-emprendimiento/alta-emprendedores/alta-emprendedores.component';
+import { AltaEmprendimientosComponent } from './emprendedor-emprendimiento/alta-emprendimientos/alta-emprendimientos.component';
 
 const routes: Routes = [
   
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-
+    {path: '', redirectTo: 'home', pathMatch: 'full' },
     {path:'home', component:HomeComponent},
-
     {path:'menu', component:MenuComponent},
-
     {path:'listarEmprendimientos', component:ListaEmprendimientosComponent},
-
     {path:'emprendedoresYemprendimientos', component:EmprendedoresEmprendimientosComponent},
-
     {path:'altaEmprendedorest', component:AltaEmprendedoresComponent},
+    {path:'altaEmprendimientos', component:AltaEmprendimientosComponent},
     
-   
   ];
 
 
