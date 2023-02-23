@@ -1,6 +1,7 @@
 package com.ttps.ttpsjava.services.imp;
 
 import com.ttps.ttpsjava.dto.LoginDTO;
+import com.ttps.ttpsjava.models.Rol;
 import com.ttps.ttpsjava.models.Usuario;
 import com.ttps.ttpsjava.repository.UsuarioRepository;
 import com.ttps.ttpsjava.services.IUsuarioService;
@@ -21,8 +22,12 @@ public class UsuarioService implements IUsuarioService {
     @Override
     public Usuario registrar(Usuario usuario) {
         Usuario usuarioVerificado = usuarioRepository.findByUsername(usuario.getUsername());
-        if(usuario != null && usuarioVerificado == null)
+        if(usuario != null && usuarioVerificado == null) {
+            Rol rol = new Rol();
+            rol.setId(2);
+            usuario.setRol(rol);
             return usuarioRepository.save(usuario);
+        }
         else return null;
     }
 

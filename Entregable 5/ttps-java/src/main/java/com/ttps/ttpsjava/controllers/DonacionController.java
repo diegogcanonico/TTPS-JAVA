@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/donaciones")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class DonacionController {
 
     @Autowired
