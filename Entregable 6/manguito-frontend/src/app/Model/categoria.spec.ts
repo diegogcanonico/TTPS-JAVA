@@ -1,4 +1,4 @@
-import { Categoria } from './Model/categoria';
+import { Categoria } from './categoria';
 
 describe('Categoria', () => {
   it('should create an instance', () => {

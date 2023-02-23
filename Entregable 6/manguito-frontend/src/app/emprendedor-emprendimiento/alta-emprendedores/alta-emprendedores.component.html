@@ -49,17 +49,23 @@
             <a ><img class="emprendedores2" src="/assets/imagenes/emprendedor.png" height="400px"></a>
         </section>
         <div id="derecha">
-                <form class="row g-3 needs-validation" novalidate action="registroExitoso.html">
+                <form  (ngSubmit) = "onSubmit()" class="row g-3 needs-validation">
                     <div class="col-md-4">
                       <label for="validationCustom01"  class="form-label" >Nombre</label>
-                      <input type="text" class="form-control" id="validationCustom01" value="" required>
+                      <input type="text" class="form-control" id="nombre" value="" required
+                      [(ngModel)] = "emprendedor.nombre"
+                      name = "nombre"
+                      >
                       <div class="valid-feedback">
                         Dato correcto
                       </div>
                     </div>
                     <div class="col-md-4">
                       <label for="validationCustom02" class="form-label">Apellido</label>
-                      <input type="text" class="form-control" id="validationCustom02" value="" required>
+                      <input type="text" class="form-control" id="apellido" value="" required
+                      [(ngModel)] = "emprendedor.apellido"
+                      name = "apellido"
+                      >
                       <div class="valid-feedback">
                         Dato correcto
                       </div>
@@ -68,34 +74,25 @@
                       <label for="validationCustomUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend" required
+                        [(ngModel)] = "emprendedor.username"
+                        name = "username"
+                        >
                         <div class="invalid-feedback">
                           Por favor, ingrese un username.
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <label for="validationCustom03" class="form-label">Ciudad</label>
-                      <input type="text" class="form-control" id="validationCustom03" required>
+                      <label for="validationCustom03" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" required
+                      [(ngModel)] = "emprendedor.password"
+                      name = "password"
+                      >
+                   
+                     
                       <div class="invalid-feedback">
-                        Por favor, ingrese una ciudad válida.
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <label for="validationCustom04" class="form-label">Provincia</label>
-                      <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Seleccione...</option>
-                        <option>...</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Por favor, seleccione una provincia válida.
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <label for="validationCustom05" class="form-label">CP</label>
-                      <input type="text" class="form-control" id="validationCustom05" required>
-                      <div class="invalid-feedback">
-                        Por favor, ingrese un CP válido.
+                        Por favor, ingrese un password válido.
                       </div>
                     </div>
                     <div class="col-12">
@@ -110,10 +107,10 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Finalizar registro</button>
+                      <button class="btn btn-primary">Finalizar registro</button>
                     </div>
                   </form>
-        </div>
+          </div>
     </main>
     <footer class="d-flex justify-content-evenly bg-navbar align-items-center">
         <h2>Contactanos</h2>
@@ -131,3 +128,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+  function mostrarContrasena(){
+      var tipo = document.getElementById("password");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
+</script>

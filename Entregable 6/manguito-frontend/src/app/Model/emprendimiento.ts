@@ -6,7 +6,7 @@ export class Emprendimiento {
     categoria:Categoria[];
 
     constructor (id: number, nombre: string, 
-        categoria: Categoria[], descripcion: string){
+        categoria: Categoria[]){
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
