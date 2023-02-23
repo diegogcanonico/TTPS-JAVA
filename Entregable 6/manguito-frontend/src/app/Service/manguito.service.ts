@@ -17,9 +17,7 @@ export class ManguitoService {
   
 
   obtenerEmprendimientos() : Observable<Emprendimiento[]>{
-
     return this.httpClient.get<Emprendimiento[]>(`${this.baseURL + "/emprendimientos/"}`);
-
   }
 
   registrarEmprendedor(emprendedor: Usuario): Observable<Object>{

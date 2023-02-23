@@ -12,18 +12,19 @@ export class AltaEmprendedoresComponent implements OnInit{
 
   emprendedor: Usuario = new Usuario();
 
-  constructor(private emprendimientoServicio: ManguitoService, private router:Router){}
+  constructor(private router:Router, private emprendimientoServicio: ManguitoService){}
 
   ngOnInit():void{}
 
-  guardarEmprendimiento(){
-    this.emprendimientoServicio.registrarEmprendedor(this.emprendedor).subscribe(dato =>{
-      this.irAHome();
-    }, error => console.log(error));
+  private guardarEmprendimiento(){
+    this.emprendimientoServicio.registrarEmprendedor(this.emprendedor).subscribe((data) => {
+      this.router.navigate(["home"]);
+      alert('Emprendedor creado con exito');
+    },);
   }
 
   irAHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(["/home"]);
   }
 
   onSubmit(){
