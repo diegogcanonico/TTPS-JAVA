@@ -5,15 +5,18 @@ import { AuthService } from '../Service/auth.service';
 import { ManguitoService } from 'src/app/Service/manguito.service';
 import { Categoria } from '../Model/categoria';
 import { ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-editar-categorias',
   templateUrl: './editar-categorias.component.html',
-  styleUrls: ['./editar-categorias.component.css']
+  styleUrls: ['./editar-categorias.component.css'],
 })
 export class EditarCategoriasComponent implements OnInit{
 
   form: FormGroup;
+
+
 
   listaDeCategorias: Categoria[]
 
@@ -21,25 +24,28 @@ export class EditarCategoriasComponent implements OnInit{
 
   categoria: Categoria = new Categoria();
 
-  constructor(private cdr: ChangeDetectorRef, private authService: AuthService, private router:Router, private emprendimientoServicio: ManguitoService, private formBuilder: FormBuilder){}
+  constructor(private cdr: ChangeDetectorRef, private authService: AuthService, private router:Router, private servicio: ManguitoService, private formBuilder: FormBuilder){
+    this.cdr.markForCheck();
+  }
     
   ngOnInit(): void {
     this.obtenerCategorias();
+    this.cdr.detectChanges();
   }
 
 
   obtenerCategorias(){
-    this.emprendimientoServicio.getListaCategorias().subscribe(dato => {
+    this.servicio.getListaCategorias().subscribe(dato => {
       this.listaDeCategorias = dato;
       console.log(this.listaDeCategorias);
     }, )
   }
 
   eliminarCategoria(id:number){
-    this.emprendimientoServicio.eliminarCategoria(id).subscribe(dato => {
-      this.obtenerCategorias = this.obtenerCategorias;
-      alert('Categoría eliminada con exito');
+    this.servicio.eliminarCategoria(id).subscribe(dato => {
+      this.obtenerCategorias();
       this.cdr.detectChanges();
+      alert('Categoría eliminada con exito');
     }, )
   }
 
