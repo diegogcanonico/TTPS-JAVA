@@ -235,5 +235,12 @@ section2{
         caption-side: bottom;
      }
 
+     .error{
+        color: red;
+     }
+
+     img:hover {
+        cursor: pointer;
+      }
    
     

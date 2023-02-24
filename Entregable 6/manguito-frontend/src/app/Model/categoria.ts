@@ -1,11 +1,8 @@
 export class Categoria {
     id:number;
-    nombre:String;
+    descripcion:string;
+    nombre:string;
     
 
-    constructor (id: number, nombre: string, 
-        ){
-        this.id = id;
-        this.nombre = nombre;
-        }
+   
 }

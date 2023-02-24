@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,20 +29,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Menu
-                    </a>
-                    <li class="nav-item">
-                      <a class="nav-link" href="sobreNosotros.html">> Registrar > Emprendimiento</a>
-                    </li>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="donacion.html">Donar</a></li>
-                    </ul>
-                 
+                  <app-menu></app-menu>
                 </ul>
-                <a>Emprendedor: juan124</a>
-                <img src="iconos/user.png" height="50px">
+                <a>Administrador: juan124</a>
+                <img src="assets/iconos/user.png" height="50px">
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit" formaction="search.html">Buscar</button>
@@ -50,40 +41,47 @@
             </div>
           </nav>
     </header>
- 
-      <p><a class="btn btn-primary btn-lg" href="registroExitoso.html" role="button">Volver</a></p>
    
+      <p><a class="btn btn-primary btn-lg" href="home.html" role="button">Volver</a></p>
+ 
     <main>
-        <section>
-            <a ><img class="emprendedores2" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
-        </section>
-        <div id="derecha">
-                <form (ngSubmit) = "onSubmit()" class="row g-2 needs-validation" novalidate action="registroExitoso2.html">
-                    <div class="col-md-6">
-                      <label for="validationCustom01"  class="form-label" >Dominio del emprendimiento</label>
-                      <input type="text" class="form-control" id="dominio" value="" required
-                      [(ngModel)] = "emprendimiento.dominio"
-                      name = "dominio"
-                      >
-                      <div class="valid-feedback">
-                        Dato correcto
-                      </div>
+        <div class="container mt-5">
+            <div class="row mt-4">
+                 <div class="col-lg-6">
+                     <div class="card">
+                         <div class="card-body">
+                         
+                             <h5 class="title" style="color: black;">
+                                Crear Categoría
+                             </h5>
+                            <form class="form-group" #miFormulario="ngForm" (ngSubmit)="agregarCategoria(miFormulario)">
+                                <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="descripcion" value="" required placeholder="descripcion"
+                      ngModel
+                      name = "descripcion">
+                                </div>
+                                <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="nombre" value="" required placeholder="Nombre"
+                      ngModel
+                      name = "nombre">
+                                </div>
+                            
+                             <div class="d-grid gap-2">
+                                <button  type="submit" class="btn btn-success btn-lg">Crear</button>
+                                <button [routerLink]="['/home']" class="btn btn-primary btn-lg" >Volver</button>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                      <label for="validationCustom02" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="password" value="" required
-                      [(ngModel)] = "emprendimiento.password"
-                      name = "password"
-                      >
-                      <div class="valid-feedback">
-                        Dato correcto
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Siguiente</button>
-                    </div>
-                  </form>
+                </div>
+            </div>
         </div>
+  
+        
+                     
+                  
+             
+       
     </main>
     <footer class="d-flex justify-content-evenly bg-navbar align-items-center">
         <h2>Contactanos</h2>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../Service/auth.service';
 
 @Component({
   selector: 'app-emprendedores-emprendimientos',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./emprendedores-emprendimientos.component.css']
 })
 export class EmprendedoresEmprendimientosComponent {
+
+  public isAuthenticated: boolean;
+
+  constructor(private authService: AuthService){}
+
+  ngOnInit() {
+    this.isAuthenticated = this.authService.isAuthenticated();
+  }
 
 }

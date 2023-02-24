@@ -28,20 +28,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="sobreNosotros.html">Sobre nosotros</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Menu
-                    </a>
-                    <li class="nav-item">
-                      <a class="nav-link" href="sobreNosotros.html">> Registrar > Emprendimiento</a>
-                    </li>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="donacion.html">Donar</a></li>
-                    </ul>
-                 
+                  <app-menu></app-menu>
                 </ul>
-                <a>Emprendedor: juan124</a>
-                <img src="iconos/user.png" height="50px">
+                <a>Administrador: juan124</a>
+                <img src="assets/iconos/user.png" height="50px">
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit" formaction="search.html">Buscar</button>
@@ -50,40 +40,69 @@
             </div>
           </nav>
     </header>
- 
-      <p><a class="btn btn-primary btn-lg" href="registroExitoso.html" role="button">Volver</a></p>
    
+      <p><a class="btn btn-primary btn-lg" href="home.html" role="button">Volver</a></p>
+ 
     <main>
         <section>
-            <a ><img class="emprendedores2" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
+            <a ><img class="emprendedores2" src="assets/imagenes/administrador.png" height="400px"></a>
+            <a  [routerLink]="['/altaEmprendimientos']"><img class="emprendedores" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
         </section>
-        <div id="derecha">
-                <form (ngSubmit) = "onSubmit()" class="row g-2 needs-validation" novalidate action="registroExitoso2.html">
-                    <div class="col-md-6">
-                      <label for="validationCustom01"  class="form-label" >Dominio del emprendimiento</label>
-                      <input type="text" class="form-control" id="dominio" value="" required
-                      [(ngModel)] = "emprendimiento.dominio"
-                      name = "dominio"
-                      >
-                      <div class="valid-feedback">
-                        Dato correcto
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="validationCustom02" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="password" value="" required
-                      [(ngModel)] = "emprendimiento.password"
-                      name = "password"
-                      >
-                      <div class="valid-feedback">
-                        Dato correcto
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Siguiente</button>
-                    </div>
-                  </form>
+
+        <section>
+            
+          </section>
+        <div id="contenedor">
+            <div id="tabla1">
+                <h1 style="color:black;margin-left:auto;margin-right:auto;">Edición de categorías</h1>
+            <table border="3" style="solid black;margin-left:auto;margin-right:auto;">
+                <thead class="thead-dark">
+            <tr>
+            <td style="color:black">Id</td>
+            <td style="color:black">Descripción</td>
+            <td style="color:black">Nombre Categoría</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td style="color:black">1</td>
+            <td style="color:black">1</td>
+            <td style="color:black">1</td>
+            </tr>
+            <tr>
+                <td style="color:black">1</td>
+                <td style="color:black">1</td>
+                <td style="color:black">1</td>
+                </tr>
+                <tr>
+                    <td style="color:black">1</td>
+                    <td style="color:black">1</td>
+                    <td style="color:black">1</td>
+                    </tr>
+                    <tr>
+                        <td style="color:black">1</td>
+                        <td style="color:black">1</td>
+                        <td style="color:black">1</td>
+                        </tr>
+                        <tr>
+                            <td style="color:black">1</td>
+                            <td style="color:black">1</td>
+                            <td style="color:black">1</td>
+                            </tr>
+                            <tr>
+                                <td style="color:black">1</td>
+                                <td style="color:black">1</td>
+                                <td style="color:black">1</td>
+                                </tr>
+        </tbody>
+        <tr>
+            
+            </table>
         </div>
+        <button type="submit" class="btn btn-primary">Editar</button>
+        <button type="submit" class="btn btn-primary">Borrar</button>
+        <button type="submit" class="btn btn-primary">Cargar</button>
+    </div>
     </main>
     <footer class="d-flex justify-content-evenly bg-navbar align-items-center">
         <h2>Contactanos</h2>

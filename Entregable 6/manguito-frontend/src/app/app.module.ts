@@ -11,6 +11,14 @@ import { AltaEmprendedoresComponent } from './emprendedor-emprendimiento/alta-em
 import { EmprendedoresEmprendimientosComponent } from './emprendedor-emprendimiento/emprendedores-emprendimientos/emprendedores-emprendimientos.component';
 import { FormsModule } from '@angular/forms';
 import { AltaEmprendimientosComponent } from './emprendedor-emprendimiento/alta-emprendimientos/alta-emprendimientos.component';
+import { LoginComponent } from './login/login.component';
+import { VistaAdministradorComponent } from './vista-administrador/vista-administrador.component';
+import { VistaEmprendedorComponent } from './vista-emprendedor/vista-emprendedor.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AltaCategoriaComponent } from './alta-categoria/alta-categoria.component';
+
 
 
 
@@ -25,6 +33,13 @@ import { AltaEmprendimientosComponent } from './emprendedor-emprendimiento/alta-
     AltaEmprendedoresComponent,
     EmprendedoresEmprendimientosComponent,
     AltaEmprendimientosComponent,
+    LoginComponent,
+    VistaAdministradorComponent,
+    VistaEmprendedorComponent,
+    EditarUsuarioComponent,
+    EditarCategoriasComponent,
+    AltaCategoriaComponent,
+  
    
 
   ],
@@ -33,7 +48,8 @@ import { AltaEmprendimientosComponent } from './emprendedor-emprendimiento/alta-
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
