@@ -15,7 +15,6 @@ import javax.validation.constraints.NotNull;
 public class Categoria {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@JsonIgnore
 	private Long id;
 	@Column(unique = true, name="nombre")
 	private String nombre;

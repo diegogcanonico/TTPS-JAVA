@@ -9,10 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class UsuarioController {
 
     @Autowired
@@ -23,7 +22,7 @@ public class UsuarioController {
         Usuario usuarioVerificado = usuarioService.registrar(usuario);
         if(usuarioVerificado != null) {
             String mensajeExito = "El usuario se ha creado correctamente";
-            return new ResponseEntity(mensajeExito, HttpStatus.CREATED);
+            return new ResponseEntity(mensajeExito, HttpStatus.OK);
         }
         else {
             String mensajeError = "El usuario que intenta registrar ya existe";
@@ -35,12 +34,11 @@ public class UsuarioController {
     public ResponseEntity<Usuario> loginUsuario(@RequestBody LoginDTO loginDTO){
         Usuario usuarioVerificado = usuarioService.login(loginDTO);
         if(usuarioVerificado != null) {
-            String mensajeExito = "El usuario se ha logueado correctamente";
-            return new ResponseEntity(mensajeExito, HttpStatus.CREATED);
+            //String mensajeExito = "El usuario se ha logueado correctamente";
+            return new ResponseEntity<>(usuarioVerificado, HttpStatus.OK);
         }
-        else {
-            String mensajeError = "Credenciales incorrectas";
-            return new ResponseEntity(mensajeError, HttpStatus.BAD_REQUEST);
+        else{
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 
