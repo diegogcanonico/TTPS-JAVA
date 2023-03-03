@@ -29,6 +29,12 @@ public class CategoriaController {
         return new ResponseEntity<>(listadoCategoria, HttpStatus.OK);
     }
 
+    @GetMapping("/obtener/{id}")
+    public ResponseEntity<Optional<Categoria>> obtenerCategoria(@PathVariable("id") long id){
+        Optional<Categoria> categoria = categoriaService.encontrar(id);
+        return new ResponseEntity<>(categoria, HttpStatus.OK);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Categoria> borrarCategoria(@PathVariable("id") long id){
         Optional<Categoria> categoria = categoriaService.encontrar(id);
@@ -41,13 +47,13 @@ public class CategoriaController {
     }
 
     @PutMapping("/actualizar")
-    public ResponseEntity<Categoria> actualizarCategoria(@RequestBody Categoria categoria){
+    public ResponseEntity<Optional<Categoria>> actualizarCategoria(@RequestBody Categoria categoria){
         Optional<Categoria> categoriaConsulta = categoriaService.encontrar(categoria.getId());
         if(!categoriaConsulta.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
             categoriaService.actualizar(categoria);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(categoriaConsulta,HttpStatus.OK);
         }
 
     }

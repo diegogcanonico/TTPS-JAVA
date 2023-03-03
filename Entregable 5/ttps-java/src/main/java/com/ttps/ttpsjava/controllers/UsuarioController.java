@@ -22,7 +22,7 @@ public class UsuarioController {
         Usuario usuarioVerificado = usuarioService.registrar(usuario);
         if(usuarioVerificado != null) {
             String mensajeExito = "El usuario se ha creado correctamente";
-            return new ResponseEntity(mensajeExito, HttpStatus.OK);
+            return new ResponseEntity(usuarioVerificado, HttpStatus.OK);
         }
         else {
             String mensajeError = "El usuario que intenta registrar ya existe";

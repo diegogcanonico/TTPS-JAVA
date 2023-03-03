@@ -26,6 +26,7 @@ public class Posteo {
     private String imagen;
     @ManyToOne(optional = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "emprendimiento_id")
+	@JsonIgnore
     private Emprendimiento emprendimiento;
 
 }

@@ -25,6 +25,7 @@ public class Plan {
     private String beneficio;
     @ManyToOne(optional = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "emprendimiento_id")
+	@JsonIgnore
     private Emprendimiento emprendimiento;
 
 }
