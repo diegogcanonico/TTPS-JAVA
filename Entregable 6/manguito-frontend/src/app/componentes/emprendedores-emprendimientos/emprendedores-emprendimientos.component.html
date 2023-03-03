@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <p class="btn-volver"><a class="btn btn-primary btn-lg" routerLink=".." role="button"><span class="button-text">Volver</span></a></p>
+  <main>
+    <div class="mainAdmin">
+      <div class="centrado3">
+        <section>
+          <a routerLink="/altaEmprendedorest"><img class="emprendedores" src="/assets/imagenes/emprendedor.png"
+              height="400px"></a>
+          <a [routerLink]="['/altaEmprendimientos']"><img class="emprendedores"
+              src="/assets/imagenes/emprendimiento.png" height="400px"></a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+
+</html>

@@ -1,6 +1,5 @@
 export class EmprendimientoRegistro {
     dominio:String;
-    password:String;
-    usuarioId: number
+    usuario_id: number
 
 }

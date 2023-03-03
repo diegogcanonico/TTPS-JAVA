@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <p class="btn-volver"><a class="btn btn-primary btn-lg" routerLink="../emprendedoresYemprendimientos" role="button"><span class="button-text">Volver</span></a></p>
+  <main>
+    <section>
+      <a><img class="emprendedores2" src="/assets/imagenes/emprendedor.png" height="400px"></a>
+    </section>
+    <div id="derecha">
+      <form class="form-group" #miFormulario="ngForm" (ngSubmit)="onSubmit(miFormulario)" class="row g-3 needs-validation">
+        <div class="form-group">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" value="" required ngModel
+            name="nombre">
+          <div class="valid-feedback">
+            Dato correcto
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" value="" ngModel
+            name="apellido">
+          <div class="valid-feedback">
+            Dato correcto
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validationCustomUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend" required
+              ngModel name="username">
+            <div class="invalid-feedback">
+              Por favor, ingrese un username.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validationCustom03" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required ngModel
+            name="password">
+          <div class="invalid-feedback">
+            Por favor, ingrese un password válido.
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Estoy de acuerdo con las condiciones del servicio
+            </label>
+            <div class="invalid-feedback">
+              Debe estar de acuerdo antes de enviar el registro.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary">Finalizar registro</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>
+<script>
+  function mostrarContrasena() {
+    var tipo = document.getElementById("password");
+    if (tipo.type == "password") {
+      tipo.type = "text";
+    } else {
+      tipo.type = "password";
+    }
+  }
+</script>

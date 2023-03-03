@@ -13,35 +13,51 @@ export class ManguitoService {
 
   private baseURL = "http://localhost:8080";
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  
 
-  obtenerEmprendimientos() : Observable<Emprendimiento[]>{
+
+  obtenerEmprendimientos(): Observable<Emprendimiento[]> {
     return this.httpClient.get<Emprendimiento[]>(`${this.baseURL + "/emprendimientos/"}`);
   }
 
-  registrarEmprendedor(emprendedor: Usuario): Observable<Object>{
+  getEmprendimiento(id: any) {
+    const url = `${this.baseURL+ "/emprendimientos/emprendimiento/" +id}`;
+    return this.httpClient.get<Emprendimiento>(url);
+  }
+
+  registrarEmprendedor(emprendedor: any): Observable<any> {
     return this.httpClient.post(`${this.baseURL + "/usuarios/"}`, emprendedor)
   }
 
-  registrarEmprendimiento(emprendimiento: EmprendimientoRegistro): Observable<Object>{
+  registrarEmprendimiento(emprendimiento: any): Observable<any> {
     return this.httpClient.post(`${this.baseURL + "/emprendimientos/"}`, emprendimiento)
   }
 
-  registrarCategoria(categoria: Categoria): Observable<any>{
+  registrarCategoria(categoria: Categoria): Observable<any> {
     return this.httpClient.post(`${this.baseURL + "/categorias/"}`, categoria)
   }
 
-  getListaCategorias(){
+  getListaCategorias() {
     return this.httpClient.get<Categoria[]>(`${this.baseURL + "/categorias/"}`);
   }
 
-  eliminarCategoria(id: number){
-    console.log(id)
-    return this.httpClient.delete<Categoria[]>(`${this.baseURL + "/categorias/"+id}`);
+  eliminarCategoria(id: number) {
+    return this.httpClient.delete<Categoria[]>(`${this.baseURL + "/categorias/" + id}`);
   }
-  
+
+  actualizarCategoria(categoria: any): Observable<any> {
+    return this.httpClient.put(`${this.baseURL + "/categorias/actualizar"}`, categoria);
+  }
+
+  getCategoria(id: any){
+    return this.httpClient.get<Categoria>(`${this.baseURL+ "/categorias/obtener/" + id}`);
+  }
+
+ 
+  actualizarUsuario(usuario: any): Observable<any> {
+    return this.httpClient.put(`${this.baseURL + "/usuarios/actualizar"}`, usuario);
+  }
 
 
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UsuarioLogin } from '../Model/usuarioLogin';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Usuario } from '../Model/usuario';
+import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 
@@ -17,21 +17,38 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 
-  login(usuario: any ): Observable<any>{
-    return this.httpClient.post(`${this.baseURL + "/usuarios/login"}`, usuario);
+  login(usuario: any): Observable<any>{
+    return this.httpClient.post(`${this.baseURL + "/usuarios/login"}`, usuario).pipe(
+      tap(() => {
+        this.setLoggedIn(true);
+      })
+    );
+  }
+
+  setLoggedIn(value: boolean): void {
+    this.loggedIn = value;
   }
 
   logout(): void {
-    this.loggedIn = false;
+    window.localStorage.clear();
+    this.setLoggedIn(false);
+    this.router.navigate([""]);
   }
 
   isAuthenticated(): boolean {
     return this.loggedIn;
   }
 
-  setLoggedIn(value: boolean) {
-    this.loggedIn = value;
+  public obtenerUsername() {
+    return window.localStorage.getItem("username")
   }
 
+  public obtenerRol() {
+    return window.localStorage.getItem("rol")
+  }
+
+  public obtenerId() {
+    return window.localStorage.getItem("id")
+  }
 
 }

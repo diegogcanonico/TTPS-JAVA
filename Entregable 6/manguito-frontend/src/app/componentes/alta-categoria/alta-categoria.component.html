@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+<app-header></app-header>
+<app-cerrar-sesion></app-cerrar-sesion>
+<p class="btn-volver"><a class="btn btn-primary btn-lg" href="home.html" role="button"><span class="button-text">Volver</span></a></p>
+<main>
+  <div class="container mt-5">
+    <div class="row mt-4">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="title" style="color: black;">
+              Crear Categoría
+            </h5>
+            <form class="form-group" #miFormulario="ngForm" (ngSubmit)="agregarCategoria(miFormulario)">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="descripcion" value="" required placeholder="descripcion"
+                  ngModel name="descripcion">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="nombre" value="" required placeholder="Nombre" ngModel
+                  name="nombre">
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success btn-lg">Crear</button>
+                <button [routerLink]="['/editarCategoria']" class="btn btn-primary btn-lg"><span class="button-text">Volver</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>
+<app-script></app-script>
+</body>
+</html>

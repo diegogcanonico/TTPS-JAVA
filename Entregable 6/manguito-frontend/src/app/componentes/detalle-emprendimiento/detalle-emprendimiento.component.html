@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <main class="twitter-style">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="emprendimiento-nombre">{{ emprendimiento.nombre }}</h1>
+          <p class="emprendimiento-descripcion">{{ emprendimiento.descripcion }}</p>
+          <img class="emprendimiento-banner" src="{{ emprendimiento.banner }}" alt="{{ emprendimiento.nombre }} banner">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Categorías:  </h2>
+          <ul class="emprendimiento-categorias">
+            <li *ngFor="let categoria of emprendimiento.categoria">{{ categoria.nombre }}</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Redes sociales:</h2>
+          <ul class="emprendimiento-redes-sociales">
+            <li *ngFor="let redSocial of emprendimiento.redSocial">{{ redSocial.empresa }} - {{ redSocial.dominio }}</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h2>Planes:</h2>
+          <ul class="emprendimiento-planes">
+            <li *ngFor="let plan of emprendimiento.planes">{{ plan.valor }} - {{ plan.cuotas }} cuotas - {{ plan.beneficio }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Usuario:</h2>
+          <ul class="emprendimiento-planes">
+          <li class="emprendimiento-usuario">{{ emprendimiento.usuario.nombre }} {{ emprendimiento.usuario.apellido }}</li>
+        </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Username:</h2>
+          <ul class="emprendimiento-planes">
+          <li class="emprendimiento-usuario">{{ emprendimiento.usuario.username }}</li>
+        </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="ver-posteos-btn" [routerLink]="['/posteos', emprendimiento.id]">Ver posteos</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>

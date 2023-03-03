@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <p class="btn-volver"><a class="btn btn-primary btn-lg" [routerLink]="['/emprendedoresYemprendimientos']" role="button"><span class="button-text">Volver</span></a></p>
+  <main>
+    <div *ngIf="authService.isAuthenticated() && authService.obtenerRol() === '3'">
+    <section>
+      <a><img class="emprendedores2" src="/assets/imagenes/emprendimiento.png" height="400px"></a>
+    </section>
+    <div id="derecha">
+      <form  #miFormulario="ngForm" (ngSubmit)="onSubmit(miFormulario)">
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">Dominio del emprendimiento</label>
+          <input type="text" class="form-control" id="dominio" value="" required [(ngModel)]="emprendimiento.dominio"
+            name="dominio">
+          <div class="valid-feedback">
+            Dato correcto
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    <div *ngIf="!authService.isAuthenticated() || authService.obtenerRol() !== '3'">
+      <app-error-autenticacion></app-error-autenticacion>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>

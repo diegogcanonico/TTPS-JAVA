@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <p class="btn-volver"><a class="btn btn-primary btn-lg" href="home.html" role="button"><span class="button-text">Volver</span></a></p>
+  <main>
+    <div class="card-body">
+      <h5 class="title" style="color: black;">
+        Modificar datos del emprendedor {{ usuario.nombre }}
+      </h5>
+      <form  #miFormulario="ngForm" (ngSubmit)="onSubmit(miFormulario)">
+        <div class="form-group">
+          <label for="nombre" style="color: black;">Nombre:</label>
+          <input type="text"  class="form-control" id="nombre"  name="nombre" value="{{usuario.nombre}}" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcion" style="color: black;">Apellido:</label>
+          <input type="text"  class="form-control" name="apellido" id="apellido" [(ngModel)]="usuario.apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="descripcion" style="color: black;">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" [(ngModel)]="usuario.password" required>
+          </div>
+        <button type="submit" class="btn btn-primary btn-lg text-center"><span class="button-text">Guardar cambios</span></button>
+      </form>
+    </div>
+  </main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>

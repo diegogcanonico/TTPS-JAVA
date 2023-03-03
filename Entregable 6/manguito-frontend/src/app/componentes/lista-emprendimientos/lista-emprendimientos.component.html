@@ -1,0 +1,23 @@
+<h3 style="color: black;">Ranking de emprendimientos</h3>
+            <table id="example" class="table table-dark mt-5 container">
+                <thead>
+                  <tr>
+                    <th scope="col">Emprendimiento</th>
+                    <th scope="col">Donaciones</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Donar</th>
+                    <th scope="col">Detalle</th>
+                  </tr>
+                </thead>
+                <tbody id="cuerpo">
+                  <tr *ngFor="let emprendimiento of emprendimientos">
+                    <td *ngIf="emprendimiento.nombre">{{emprendimiento.nombre}}</td>
+                    <td *ngIf="emprendimiento.nombre">10</td>
+                    <td *ngIf="emprendimiento.nombre">
+                     <div *ngFor="let cat of emprendimiento.categoria">{{cat.nombre}}</div>
+                    </td> 
+                    <td *ngIf="emprendimiento.nombre"><a href="/assets/donacion.html?valor={{emprendimiento.nombre}}"><img href="/assets/donacion.html" src="/assets/iconos/piggy-bank.png"/></a></td>
+                    <td *ngIf="emprendimiento.nombre"><a class="nav-link" [routerLink]="['/detalle-emprendimiento', emprendimiento.id]" style="cursor: pointer;">Ver</a></td>
+                  </tr>
+                </tbody>
+              </table>

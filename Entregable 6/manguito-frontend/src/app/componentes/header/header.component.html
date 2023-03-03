@@ -1,0 +1,40 @@
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+            <div class="container-fluid">
+              <a  style="margin-right: 10px;" class="redondo5">
+              </a>
+              <a class="navbar-brand" href="#">Manguito</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/sobreNosotros']">Sobre nosotros</a>
+                  </li>
+                  <app-menu></app-menu>
+                </ul>
+                <div margin-right="10" *ngIf="authService.isAuthenticated() && authService.obtenerRol() === '1'">
+                  <a class="nav-link" [routerLink]="['/vistaAdministrador']"><button type="button" class="btn btn-warning">Administrador</button></a>
+                </div>
+                <div margin-right="10" *ngIf="authService.isAuthenticated() && authService.obtenerRol() === '3'">
+                  <a class="nav-link" [routerLink]="['/vistaEmprendedor']"><button type="button" class="btn btn-warning">Emprendedor</button></a>
+                </div>
+                <div margin-right="10" *ngIf="authService.isAuthenticated() && authService.obtenerRol() === '2'">
+                  <a class="nav-link" [routerLink]="['/vistaDonante']"><button type="button" class="btn btn-warning">Donante</button></a>
+                </div>
+                <div *ngIf="authService.isAuthenticated()">
+                  <a>Usuario: {{authService.obtenerUsername()}}</a>
+                </div>
+                <img src="assets/iconos/user.png" height="30px">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit" formaction="search.html">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
