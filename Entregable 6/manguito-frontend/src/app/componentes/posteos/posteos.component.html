@@ -1,1 +1,34 @@
-<p>posteos works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <main class="twitter-style">
+    <div class="owl-carousel owl-theme">
+      <div *ngFor="let posteo of posteos">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="posteo-nombrePosteo">{{ posteo.nombrePosteo }}</h1>         
+              <img class="posteo-imagen" src="{{ posteo.imagen }}" alt="{{ posteo.imagen }} banner">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Posteo:</h2>
+              <ul class="emprendimiento-planes">
+                <li>{{ posteo.texto }}</li>
+              </ul>
+              <h3 style="color: black;">------------------------------------</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>

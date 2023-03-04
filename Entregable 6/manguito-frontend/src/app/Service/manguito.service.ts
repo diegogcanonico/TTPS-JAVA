@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Emprendimiento } from '../Model/emprendimiento';
 import { Observable } from 'rxjs';
 import { Usuario } from '../Model/usuario';
+import { Posteo } from '../Model/posteo';
 import { EmprendimientoRegistro } from '../Model/emprendimientoRegistro';
 import { Categoria } from '../Model/categoria';
 
@@ -57,6 +58,10 @@ export class ManguitoService {
  
   actualizarUsuario(usuario: any): Observable<any> {
     return this.httpClient.put(`${this.baseURL + "/usuarios/actualizar"}`, usuario);
+  }
+
+  getPosteos(id:any): Observable<Posteo[]> {
+    return this.httpClient.get<Posteo[]>(`${this.baseURL + "/posteos/" + id}`);
   }
 
 
