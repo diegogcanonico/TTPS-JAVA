@@ -23,9 +23,9 @@ public class PosteoController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping
-    public ResponseEntity<List<Posteo>> obtenerPosteos(){
-        List<Posteo> listadoPosteo = posteoService.listar();
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Posteo>> obtenerPosteos(@PathVariable("id") long id){
+        List<Posteo> listadoPosteo = posteoService.listarDeEmprendimiento(id);
         return new ResponseEntity<>(listadoPosteo, HttpStatus.OK);
     }
 

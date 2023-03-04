@@ -2,6 +2,7 @@ package com.ttps.ttpsjava.controllers;
 
 import com.ttps.ttpsjava.models.Donacion;
 import com.ttps.ttpsjava.models.Emprendimiento;
+import com.ttps.ttpsjava.models.Posteo;
 import com.ttps.ttpsjava.services.imp.EmprendimientoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -69,5 +70,7 @@ public class EmprendimientoController {
             return new ResponseEntity<>(datosEmprendimiento, HttpStatus.OK);
         }
     }
+
+
 
 }

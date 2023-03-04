@@ -29,6 +29,11 @@ public class PosteoService implements IPosteoService {
         return posteoRepository.findAll();
     }
 
+
+    public List<Posteo> listarDeEmprendimiento(Long id){
+        return posteoRepository.findByEmprendimientoId(id);
+    }
+
     @Override
     public Optional<Posteo> encontrar(Long id){
         return posteoRepository.findById(id);
