@@ -28,6 +28,7 @@ import { CerrarSesionComponent } from './componentes/cerrar-sesion/cerrar-sesion
 import { EditarDatosCategoriaComponent } from './componentes/editar-datos-categoria/editar-datos-categoria.component';
 import { DetalleEmprendimientoComponent } from './componentes/detalle-emprendimiento/detalle-emprendimiento.component';
 import { PosteosComponent } from './componentes/posteos/posteos.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
 
 
 
@@ -60,6 +61,7 @@ import { PosteosComponent } from './componentes/posteos/posteos.component';
     EditarDatosCategoriaComponent,
     DetalleEmprendimientoComponent,
     PosteosComponent,
+    LoginComponentComponent,
   
    
 
