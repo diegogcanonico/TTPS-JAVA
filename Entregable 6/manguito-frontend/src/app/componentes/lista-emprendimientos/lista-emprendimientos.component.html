@@ -16,7 +16,7 @@
                     <td *ngIf="emprendimiento.nombre">
                      <div *ngFor="let cat of emprendimiento.categoria">{{cat.nombre}}</div>
                     </td> 
-                    <td *ngIf="emprendimiento.nombre"><a href="/assets/donacion.html?valor={{emprendimiento.nombre}}"><img href="/assets/donacion.html" src="/assets/iconos/piggy-bank.png"/></a></td>
+                    <td *ngIf="emprendimiento.nombre"><a [routerLink]="['/donacion', emprendimiento.id]"><img href="/assets/donacion.html" src="/assets/iconos/piggy-bank.png"/></a></td>
                     <td *ngIf="emprendimiento.nombre"><a class="nav-link" [routerLink]="['/detalle-emprendimiento', emprendimiento.id]" style="cursor: pointer;">Ver</a></td>
                   </tr>
                 </tbody>

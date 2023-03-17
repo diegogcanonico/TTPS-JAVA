@@ -6,6 +6,7 @@ import { Usuario } from '../Model/usuario';
 import { Posteo } from '../Model/posteo';
 import { EmprendimientoRegistro } from '../Model/emprendimientoRegistro';
 import { Categoria } from '../Model/categoria';
+import { Donacion } from '../Model/donacion';
 
 @Injectable({
   providedIn: 'root'
@@ -62,6 +63,10 @@ export class ManguitoService {
 
   getPosteos(id:any): Observable<Posteo[]> {
     return this.httpClient.get<Posteo[]>(`${this.baseURL + "/posteos/" + id}`);
+  }
+
+  realizarDonacion(donacion:Donacion): Observable<any>{
+    return this.httpClient.post(`${this.baseURL + "/donaciones/"}`, donacion)
   }
 
 

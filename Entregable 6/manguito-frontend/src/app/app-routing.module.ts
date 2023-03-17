@@ -6,7 +6,7 @@ import { MenuComponent } from './componentes/menu/menu.component';
 import { EmprendedoresEmprendimientosComponent } from './componentes/emprendedores-emprendimientos/emprendedores-emprendimientos.component';
 import { AltaEmprendedoresComponent } from './componentes/alta-emprendedores/alta-emprendedores.component';
 import { AltaEmprendimientosComponent } from './componentes/alta-emprendimientos/alta-emprendimientos.component';
-import { LoginComponent } from './componentes/login/login.component';
+import { LoginComponent } from './Model/login/login.component';
 import { VistaAdministradorComponent } from './componentes/vista-administrador/vista-administrador.component';
 import { VistaEmprendedorComponent } from './componentes/vista-emprendedor/vista-emprendedor.component';
 import { EditarCategoriasComponent } from './componentes/editar-categorias/editar-categorias.component';
@@ -22,6 +22,9 @@ import { CerrarSesionComponent } from './componentes/cerrar-sesion/cerrar-sesion
 import { EditarDatosCategoriaComponent } from './componentes/editar-datos-categoria/editar-datos-categoria.component';
 import { DetalleEmprendimientoComponent } from './componentes/detalle-emprendimiento/detalle-emprendimiento.component';
 import { PosteosComponent } from './componentes/posteos/posteos.component';
+import { DonacionComponent } from './componentes/donacion/donacion.component';
+
+
 
 
 const routes: Routes = [
@@ -49,6 +52,7 @@ const routes: Routes = [
     {path:'editarDatosCategoria', component:EditarDatosCategoriaComponent},
     {path: 'detalle-emprendimiento/:id', component: DetalleEmprendimientoComponent },
     {path: 'posteos/:id', component: PosteosComponent },
+    {path: 'donacion/:id', component: DonacionComponent },
     
   ];
 

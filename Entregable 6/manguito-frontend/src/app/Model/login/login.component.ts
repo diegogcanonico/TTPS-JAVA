@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../Service/auth.service';
 import { Router } from '@angular/router';
-import { UsuarioLogin } from '../../Model/usuarioLogin';
+import { UsuarioLogin } from '../usuarioLogin';
 import { catchError, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { NgForm } from '@angular/forms';
-import { Usuario } from '../../Model/usuario';
+import { Usuario } from '../usuario';
 
 @Component({
   selector: 'app-login',

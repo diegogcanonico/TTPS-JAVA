@@ -11,7 +11,7 @@ import { AltaEmprendedoresComponent } from './componentes/alta-emprendedores/alt
 import { EmprendedoresEmprendimientosComponent } from './componentes/emprendedores-emprendimientos/emprendedores-emprendimientos.component';
 import { FormsModule } from '@angular/forms';
 import { AltaEmprendimientosComponent } from './componentes/alta-emprendimientos/alta-emprendimientos.component';
-import { LoginComponent } from './componentes/login/login.component';
+import { LoginComponent } from './Model/login/login.component';
 import { VistaAdministradorComponent } from './componentes/vista-administrador/vista-administrador.component';
 import { VistaEmprendedorComponent } from './componentes/vista-emprendedor/vista-emprendedor.component';
 import { EditarUsuarioComponent } from './componentes/editar-usuario/editar-usuario.component';
@@ -29,6 +29,7 @@ import { EditarDatosCategoriaComponent } from './componentes/editar-datos-catego
 import { DetalleEmprendimientoComponent } from './componentes/detalle-emprendimiento/detalle-emprendimiento.component';
 import { PosteosComponent } from './componentes/posteos/posteos.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
+import { DonacionComponent } from './componentes/donacion/donacion.component';
 
 
 
@@ -62,6 +63,7 @@ import { LoginComponentComponent } from './login-component/login-component.compo
     DetalleEmprendimientoComponent,
     PosteosComponent,
     LoginComponentComponent,
+    DonacionComponent,
   
    
 

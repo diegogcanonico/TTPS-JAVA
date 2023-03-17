@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<app-head></app-head>
+<body>
+  <app-header></app-header>
+  <app-cerrar-sesion></app-cerrar-sesion>
+  <p class="btn-volver"><a class="btn btn-primary btn-lg" href="home.html" role="button"><span class="button-text">Volver</span></a></p>
+  <main>
+    <section>
+        <a ><img class="emprendedores2" src="assets/imagenes/donacion.png" height="400px"></a>
+    </section>
+    <div id="derecha">
+    <form #miFormulario="ngForm" (ngSubmit)="onSubmit(miFormulario)">
+        <div class="form-group1">
+          <label for="exampleInputEmail1" style="color: black">Cantidad de manguitos</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese cantidad de manguitos" id="cantidadManguitos" [(ngModel)]="donacion.cantidadManguitos" name="cantidadManguitos" value="{{donacion.cantidadManguitos}}">
+          <small id="emailHelp" class="text"></small>
+        </div>
+        <br>
+        <div class="form-group2">
+          <label for="exampleInputPassword1" style="color: black">Nombre del donante (opcional)</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese una red social" id="nombreDonador" [(ngModel)]="donacion.nombreDonador" name="nombreDonador" value="{{donacion.nombreDonador}}" required >
+        </div>
+        <br>
+        <div class="form-group2">
+            <label for="exampleInputPassword1" style="color: black">Contacto</label>
+            <input type="checkbox" id="cbox1" value="first_checkbox" style="color: black"> Recibe beneficio
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese una red social">
+          </div>
+          <br>
+          <div class="form-group2">
+            <label for="exampleInputPassword1" style="color: black">Ingrese un mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="mensaje" [(ngModel)]="donacion.mensaje" name="mensaje" value="{{donacion.mensaje}}"></textarea>
+          </div>
+       <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+</main>
+  <app-footer></app-footer>
+  <app-script></app-script>
+</body>
+</html>
